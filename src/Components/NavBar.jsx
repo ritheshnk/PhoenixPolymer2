@@ -15,7 +15,7 @@ export default function NavBar() {
                                 <a href="#" className="py-2 px-1 block relative">
                                     {item}
                                     {/* Animated Underline */}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-800 transition-all duration-300 ease-out group-hover:w-full"></span>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-800 transition-all duration-300 ease-out group-hover:w-full"></span>
                                 </a>
                             </li>
                         ))}

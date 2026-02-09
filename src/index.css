@@ -13,3 +13,59 @@
 .animate-shimmer {
   animation: shimmer 8s linear infinite;
 }
+
+/* Water Fill Effect */
+.btn-water {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  /* Ensure the text is visible on top of the fill */
+  transition: color 0.4s ease-in-out;
+}
+
+.btn-water span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Initial State */
+.btn-water {
+  color: white;
+}
+
+.btn-water:hover {
+  border-color: #dc2626;
+  /* Match the water fill color */
+}
+
+.btn-water::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 150%;
+  padding-bottom: 150%;
+  /* Creates a square based on width aspect ratio */
+  background-color: #dc2626;
+  /* red-600 */
+  border-radius: 40%;
+  transform: translateX(-50%) rotate(0deg);
+  transition: top 0.8s ease;
+  z-index: -1;
+  animation: wave 6s infinite linear;
+}
+
+.btn-water:hover::before {
+  top: -280%;
+  /* Moves up significantly to cover the button with the rotating 'water' blobl */
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
