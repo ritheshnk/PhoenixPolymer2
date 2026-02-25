@@ -13,15 +13,23 @@ const productImages = Object.entries(imageModules)
     .sort((a, b) => a.number - b.number)
     .map(item => item.src);
 
-// Generate unique dummy data for all detected images
+const productNames = [
+    "Rubber buffer", "Rubber washer", "Rubber bush", "Nylone spaces", "Silicone grommets",
+    "Rubber pipe bush", "Rubber sheet", "Silicone gasket", "Rubber leg", "Rubber grommets",
+    "Silicone grommets", "Rubber closed grommets", "Rubber end cap", "Rubber knob", "Rubber bushes",
+    "Silicone rings", "Rubber vibration pad", "Rubber rings", "Rubber gasket", "Rubber square gasket",
+    "Silicone gasket", "Rubber round pads", "Rubber foot rest", "Silicone gasket", "Rubber metal bonding"
+];
+
+// Generate unique data for all detected images
 const products = productImages.map((img, index) => {
     // Determine a product number based on the index + 1
     const productNumber = index + 1;
 
     return {
         id: productNumber,
-        // Unique dummy name that the user can easily replace later
-        name: `Phoenix Product ${productNumber}`,
+        // Use provided name if available, fallback to dummy name
+        name: productNames[index] || `Phoenix Product ${productNumber}`,
         image: img,
         // Generic description placeholder
         desc: 'Premium quality industrial polymer material designed for high performance, durability, and specific manufacturing requirements.',
@@ -57,15 +65,9 @@ export default function Products() {
                             </div>
 
                             <div className="p-5">
-                                <h3 className="text-lg font-bold mb-2 group-hover:text-red-500 transition-colors duration-300 line-clamp-2">
+                                <h3 className="text-lg font-bold group-hover:text-yellow-400 transition-colors duration-300 text-center">
                                     {product.name}
                                 </h3>
-                                <p className="text-sm text-neutral-400 line-clamp-3 mb-4">
-                                    {product.desc}
-                                </p>
-                                <button className="w-full py-2 px-4 rounded-lg bg-neutral-800 hover:bg-red-700 text-sm font-medium transition-all duration-300 border border-neutral-700 hover:border-red-600">
-                                    View Details
-                                </button>
                             </div>
                         </div>
                     ))}
