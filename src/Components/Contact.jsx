@@ -21,7 +21,7 @@ const Contact = () => {
         const whatsappMessage = `Hi,%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
 
         // WhatsApp API URL (India Country Code +91 assumed based on user location)
-        const phoneNumber = '918660124612';
+        const phoneNumber = '917760563250';
         const url = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
 
         window.open(url, '_blank');
@@ -37,7 +37,7 @@ const Contact = () => {
             <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-start relative z-10 my-10">
 
                 {/* Left Side: Info */}
-                <div className="space-y-8 mt-4 lg:mt-12">
+                <div className="space-y-8">
                     <div className="space-y-4">
                         <h2 className="text-xl text-red-500 font-medium tracking-wide uppercase">Contact Us</h2>
                         <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
@@ -59,7 +59,11 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-semibold text-lg group-hover:text-red-400 transition-colors">Our Location</h3>
-                                <p className="text-gray-400 mt-1">123 Innovation Way, Tech City, CA 94043</p>
+                                <p className="text-gray-400 mt-1">PHOENIX POLYMER PRODUCTS
+                                    NO-4, 5TH CROSS, PATECHANNAPPA INDUSTRIAL ESTATE,
+                                    MAGADI MAIN ROAD
+                                    KAMAKSHIPALYA
+                                    BANGALORE -560079</p>
                             </div>
                         </div>
 
@@ -72,7 +76,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-semibold text-lg group-hover:text-red-400 transition-colors">Phone Number</h3>
-                                <p className="text-gray-400 mt-1">+91 8660124612</p>
+                                <p className="text-gray-400 mt-1">+91 7760563250 / +91 7795523470</p>
                             </div>
                         </div>
 
@@ -85,7 +89,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-semibold text-lg group-hover:text-red-400 transition-colors">Email Address</h3>
-                                <p className="text-gray-400 mt-1">hello@phoenix.com</p>
+                                <p className="text-gray-400 mt-1">phoenixpolymerproducts@gmail.com </p>
                             </div>
                         </div>
                     </div>
