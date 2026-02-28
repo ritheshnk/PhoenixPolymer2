@@ -1,18 +1,23 @@
 import { Link } from 'react-router-dom'
 import bgVideo from '../../backgroundVideo/Video Project.mp4'
+import posterImg from '../assets/home-poster.png'
 
 export default function Home() {
     return (
         <div className="relative h-screen w-full overflow-hidden">
             {/* Video Background */}
             <video
-                src={bgVideo}
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 autoPlay
                 loop
                 muted
                 playsInline
-            />
+                poster={posterImg}
+                preload="auto"
+            >
+                <source src={bgVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
 
             {/* Dark Overlay/Tint - This must be AFTER the video to sit on top of it */}
             <div className="absolute inset-0 bg-black/60"></div>
