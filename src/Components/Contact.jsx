@@ -28,7 +28,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white flex items-center justify-center p-6 md:p-12 font-['Outfit'] relative overflow-hidden">
+        <div className="min-h-screen bg-black text-white flex items-center justify-center p-6 pt-24 md:p-12 font-['Outfit'] relative overflow-hidden">
 
             {/* Background Effects */}
             <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-red-900/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
@@ -49,6 +49,19 @@ const Contact = () => {
                     </div>
 
                     <div className="space-y-8 pt-8 border-t border-white/10">
+                        {/* Proprietor */}
+                        <div className="flex items-start space-x-5 group">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-red-500/50 transition-colors duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-red-500">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 className="text-white font-semibold text-lg group-hover:text-red-400 transition-colors">Proprietor</h3>
+                                <p className="text-gray-400 mt-1 uppercase">Punith Sasihithlu</p>
+                            </div>
+                        </div>
+
                         {/* Address */}
                         <div className="flex items-start space-x-5 group">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-red-500/50 transition-colors duration-300">
@@ -59,11 +72,13 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="text-white font-semibold text-lg group-hover:text-red-400 transition-colors">Our Location</h3>
-                                <p className="text-gray-400 mt-1">PHOENIX POLYMER PRODUCTS
-                                    NO-4, 5TH CROSS, PATECHANNAPPA INDUSTRIAL ESTATE,
-                                    MAGADI MAIN ROAD
-                                    KAMAKSHIPALYA
-                                    BANGALORE -560079</p>
+                                <div className="text-gray-400 mt-1">
+                                    PHOENIX POLYMER PRODUCTS<br />
+                                    NO-4, 5TH CROSS, PATECHANNAPPA INDUSTRIAL ESTATE,<br />
+                                    MAGADI MAIN ROAD<br />
+                                    KAMAKSHIPALYA<br />
+                                    BANGALORE -560079
+                                </div>
                             </div>
                         </div>
 
@@ -96,7 +111,7 @@ const Contact = () => {
                 </div>
 
                 {/* Right Side: Form */}
-                <div className="bg-neutral-900/50 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
+                <div className="lg:mt-32 bg-neutral-900/50 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-3xl shadow-2xl relative overflow-hidden">
 
                     {/* Decorative glow inside card */}
                     <div className="absolute -top-20 -right-20 w-40 h-40 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>

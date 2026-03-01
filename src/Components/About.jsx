@@ -2,7 +2,7 @@ import AboutImg from "../assets/Images/ISO_Certification.jpeg"
 
 export default function About() {
     return (
-        <div className="min-h-screen bg-black text-white flex items-center justify-center p-6 md:p-12 font-['Outfit'] relative overflow-hidden">
+        <div className="min-h-screen bg-black text-white flex items-center justify-center p-6 pt-24 md:p-12 font-['Outfit'] relative overflow-hidden">
 
             {/* Subtle background glow */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-900/20 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
