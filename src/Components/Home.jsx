@@ -1,12 +1,24 @@
+import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import bgVideo from '../../backgroundVideo/Video Project.mp4'
 import posterImg from '../assets/home-poster.png'
 
 export default function Home() {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.play().catch(error => {
+                console.error("Video autoplay failed:", error);
+            });
+        }
+    }, []);
+
     return (
         <div className="relative h-screen w-full overflow-hidden">
             {/* Video Background */}
             <video
+                ref={videoRef}
                 className="absolute top-0 left-0 w-full h-full object-cover"
                 autoPlay
                 loop
